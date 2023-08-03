@@ -1,6 +1,6 @@
-from serialC import serialCtrl
-from dataMaster import DataMaster
-from contin import CONTIN
+from .serialC import serialCtrl
+from .dataMaster import DataMaster
+from .contin import CONTIN
 from tkinter.filedialog import asksaveasfilename
 
 import os, sys
@@ -944,7 +944,7 @@ class FITTING_FRAME(ttk.Frame):
                 dist.remove()
             #print('hola')
             self.contin = CONTIN(
-                '../contin-exe/contin-windows.exe', #path,
+                path,
                 contin_points=NG,
                 angle=angle,
                 temperature=T,
@@ -980,7 +980,7 @@ class FITTING_FRAME(ttk.Frame):
             #print('hola2')
             print(e)
             self.contin = CONTIN(
-                '../contin-exe/contin-windows.exe',#path,
+                path,
                 contin_points=NG,
                 angle=angle,
                 temperature=T,
